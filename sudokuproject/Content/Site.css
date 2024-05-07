@@ -1,0 +1,223 @@
+﻿body {
+	padding-top: 50px;
+	padding-bottom: 20px;
+	background-image: url('/Content/img/sudoku_background.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: 'Lora', serif;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/*footer**/
+
+.page-footer .footer-copyright {
+	overflow: hidden;
+	min-height: 50px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	padding: 10px 0px;
+	color: rgba(255, 255, 255, 0.8);
+	background-color: rgba(51, 51, 51, 0.08);
+}
+
+.page-footer {
+	padding-top: 20px;
+	margin-bottom:-20px;
+}
+	.page-footer .footer-copyright {
+		font-weight: 300;
+		color: #000;
+	}
+
+		.page-footer .footer-copyright .container .copyright_left {
+			float: left;
+		}
+
+		.page-footer .footer-copyright .container .copyright_right {
+			float: right;
+		}
+
+footer {
+	background-color: #85FFBD;
+	background-image: linear-gradient(45deg, #85FFBD 0%, #94ff7d 100%);
+	font-weight: 400;
+  
+}
+
+
+
+/* footer social icons */
+ul.social-network {
+	list-style: none;
+	display: inline;
+	margin-left: 0 !important;
+	padding: 0;
+}
+
+	ul.social-network li {
+		display: inline;
+		margin: 0 5px;
+	}
+
+
+/* footer social icons */
+.social-network a.icoRss:hover {
+	background-color: #F56505;
+}
+
+.social-network a.icoFacebook:hover {
+	background-color: #3B5998;
+}
+
+.social-network a.icoInstagram:hover {
+	background-color: #BA1A7D;
+}
+
+.social-network a.icoTwitter:hover {
+	background-color: #33ccff;
+}
+
+.social-network a.icoGoogle:hover {
+	background-color: #BD3518;
+}
+
+.social-network a.icoVimeo:hover {
+	background-color: #0590B8;
+}
+
+.social-network a.icoLinkedin:hover {
+	background-color: #007bb7;
+}
+
+.social-network a.icoPinterest:hover {
+	background-color: #e60023;
+}
+
+.social-network a.icoRss:hover i, .social-network a.icoFacebook:hover i, .social-network a.icoInstagram:hover i, .social-network a.icoTwitter:hover i,
+.social-network a.icoGoogle:hover i, .social-network a.icoVimeo:hover i, .social-network a.icoLinkedin:hover i {
+	color: #fff;
+}
+
+a.socialIcon:hover, .socialHoverClass {
+	color: #44BCDD;
+}
+
+.social-circle li a {
+	display: inline-block;
+	position: relative;
+	margin: 0 auto 0 auto;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	text-align: center;
+	width: 50px;
+	height: 50px;
+	font-size: 35px !important;
+}
+
+.social-circle li i {
+	margin: 0;
+	line-height: 50px;
+	text-align: center;
+}
+
+.social-circle li a:hover i, .triggeredHover {
+	-moz-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-ms--transform: rotate(360deg);
+	transform: rotate(360deg);
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	transition: all 0.2s;
+}
+
+.social-circle i {
+	/*color: #fff;*/
+	-webkit-transition: all 0.8s;
+	-moz-transition: all 0.8s;
+	-o-transition: all 0.8s;
+	-ms-transition: all 0.8s;
+	transition: all 0.8s;
+}
+
+.green-card-div {
+	-webkit-transition: -webkit-box-shadow .25s;
+	transition: -webkit-box-shadow .25s;
+	transition: box-shadow .25s;
+	transition: box-shadow .25s, -webkit-box-shadow .25s;
+	padding: 24px;
+	margin: 0.5rem 0 1rem 0;
+	border-radius: 2px;
+	background-color: #D4FFE2;
+}
+
+
+.error-input-div  {
+	padding:5px;
+	border:1px solid darkred;
+	border-radius:5px;
+	background-color:red;
+	color:white;
+	font-weight:bold;
+	font-size:2vw;
+	margin-bottom:10px;
+}
+	
+input {
+	font-family: Arial;
+}
+	/*
+a {
+	background-color: #D3D3D3;
+}
+	*/
+
+/*User*/
+#username {
+	font-weight: bold;
+	text-transform: capitalize;
+	font-size: 2vw;
+	background-color: #0093E9;
+	background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+	border-radius: 10px;
+	display: inline-block;
+	padding: 10px;
+	border: 1px solid grey;
+	font-size: 3vw;
+	color:white;
+	padding-left:25px;
+	padding-right:25px;
+}
+#userbutton {
+	margin-bottom: 10px;
+}
+
+

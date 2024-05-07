@@ -1,0 +1,44 @@
+﻿@model string
+@{
+	ViewBag.Title = "Create";
+}
+
+<center><h2 class="game-header">Create Role</h2></center>
+<hr />
+<div class="container">
+	<div class="row">
+		<div class="col-sm-offset-4 col-sm-3 col-md-5">
+			<div class="green-card-div" style="display:inline-block;">
+				<center>
+
+					<div class="error-input-div">@Html.ValidationSummary()</div>
+
+					@Html.ValidationSummary()
+					@using (Html.BeginForm())
+					{
+						<div class="form-group">
+							<label>Name</label>
+							<input name="name" value="@Model" class="form-control" />
+						</div>
+						<button type="submit" class="btn btn-primary">Create</button>
+					}
+
+
+				</center>
+			</div>
+		</div>
+	</div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

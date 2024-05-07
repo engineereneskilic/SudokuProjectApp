@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>@ViewBag.Title - Sudoku App</title>
+	@Styles.Render("~/Content/css")
+	@Scripts.Render("~/bundles/modernizr")
+	<link rel="apple-touch-icon" sizes="180x180" href="~/Content/img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="~/Content/img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="~/Content/img/favicon/favicon-16x16.png">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<script type="text/javascript" src="~/Scripts/sudoku.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<meta name="title" content="Sudoku App">
+	<meta name="description" content="You can play the Sudoku game on our website by enjoying it online.">
+	<meta name="keywords" content="Sudoku game play,Sudoku online play, sudoku game,online sudoku game play">
+	<meta name="robots" content="index, follow">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="language" content="English">
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+    </div>  
+	<footer class="page-footer">
+		<div class="container">
+			<div class="row">
+				
+					<div class="col-lg-3 col-md-3">
+						<img src="~/Content/img/site-icon.png" width="120" style="margin-left:-20px;" class="">
+						<h3 class="footer-siteaddress">@ViewBag.SiteAddress</h3>
+					</div>
+					
+				
+				<div class="col-lg-3 col-md-3">
+					<h3 class="footer-title">@ViewBag.SiteName</h3>
+					<div class="footer-contents sudoku-mean">
+						<p style="text-align:left;">
+							Sudoku is one of the most popular games of all time. The purpose of Sudoku is to fill with 9x9 square number. The row, column and 3x3 partitions 1 to 9 in the array would contain all terms. Sudoku is an excellent brain game. If you play Sudoku every day, the expectation on the agenda and in your brain in general. In short, Sudoku will become your favorite free internet game.
+						</p>
+					</div>
+				</div>
+					<div class="col-lg-3 col-md-3">
+						<h3 style="margin-left:23px;" class="white-text footer-title">Social Media</h3>
+						<ul class="social-network social-circle footer-contents">
+							<!--<li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li> -->
+							<li><a href="https://www.facebook.com/@ViewBag.SiteName" class="icoFacebook" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="https://twitter.com/@ViewBag.SiteName" target="_blank" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="https://www.instagram.com/@ViewBag.SiteName" class="icoInstagram" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
+							<!--<li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li> -->
+							<li><a href="https://pinterest.com/@ViewBag.SiteName" target="_blank" class="icoPinterest" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
+						</ul>
+					</div>
+					<div class="col-lg-3 col-md-3">
+						<div class="col-md-3"><h3 class="white-text footer-title">Contact</h3></div><br>
+						<div style="clear:both;"></div>
+						<p class="footer-contents">
+							Your opinions and suggestions are important to us. You can send your comments and suggestions about the Sudoku game to <a href="mailto:@(ViewBag.EmailTo)">@ViewBag.EmailTo</a>. You can also reach us through our social media accounts.
+						</p>
+					</div>
+				</div>
+			</div>
+
+		<div class="footer-copyright">
+			<div class="container">
+				<div class="copyright_left">
+					&copy; @DateTime.Now.Year @ViewBag.SiteAddress | @ViewBag.EmailTo
+				</div>
+				<div class="copyright_right">
+					@Html.ActionLink("Term of Use", "TermofUse", null, new { target = "_blank", rel = "nofollow" }) | @Html.ActionLink("Privacy Policy", "Privacypolicy", null, new { target = "_blank", rel = "nofollow" })
+				</div>
+			</div>
+		</div>
+	</footer>
+    
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

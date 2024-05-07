@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@if (User.Identity.IsAuthenticated)
+{
+
+
+	<div class="header">
+		<h1 id="game-header" class="game-header">Sudoku</h1>
+		<hr />
+		<div class="user-div">
+			<h2 id="welcome" class="welcome">Welcome</h2><br/>
+			<h3 class="usernamediv" id="username">@User.Identity.Name</h3><br>
+			<a  id="userbutton"class="btn btn-danger btn-lg" href="/Account/Logout">LogOut</a>
+		</div>
+		<div id="setup-game">
+			<div id="diff">
+				<h2 class="header-titles" id="diff-title">Choose Difficulty: </h2>
+				<label><input id="diff-1" type="radio" name="diff" value="easy" checked />Easy</label>
+				<label><input id="diff-2" type="radio" name="diff" value="medium" />Medium</label>
+				<label><input id="diff-3" type="radio" name="diff" value="hard" />Hard</label>
+			</div>
+			<div id="time">
+				<h2 class="header-titles" id="time-title">Choose Time: </h2>
+				<label><input id="time-1" type="radio" name="time" value="three" checked /><br />3 Min</label>
+				<label><input id="time-2" type="radio" name="time" value="five" /><br /> 5 Min</label>
+				<label><input id="time-3" type="radio" name="time" value="ten" /><br />10 Min</label>
+			</div>
+			<div id="theme">
+				<h2 class="header-titles" id="theme-title">Choose Theme: </h2>
+				<label><input id="theme-1" type="radio" name="theme" value="light" onchange="changeTheme(this)" checked />Light</label>
+				<label><input id="theme-2" type="radio" name="theme" value="dark" onchange="changeTheme(this)" />Dark</label>
+			</div>
+		</div>
+		<button class="greenbutton" id="start-btn">Create New Game</button>
+	</div>
+
+<div id="sodoku_game_section" class="container">
+	<div class="row">
+		 <div id="stats">
+			 <center>
+			 	<div id="timer_div">Timer: <p id="timer"></p></div>
+				<div id="lives_div"><p id="lives"></p></div>
+			 </center>
+		 </div>
+		 <div id="game">
+		 	<div id="board"></div>
+			<div id="number-container" class="hidden">
+				<p draggable="true" id="one" class="grabbable">1</p>
+				<p draggable="true" id="two" class="grabbable">2</p>
+				<p draggable="true" id="three" class="grabbable">3</p>
+				<p draggable="true" id="four" class="grabbable">4</p>
+				<p draggable="true" id="five" class="grabbable">5</p>
+				<p draggable="true" id="six" class="grabbable">6</p>
+				<p draggable="true" id="seven" class="grabbable">7</p>
+				<p draggable="true" id="eight" class="grabbable">8</p>
+				<p draggable="true" id="nine" class="grabbable">9</p>
+			</div>
+		 </div>
+	</div>
+</div>
+}
+else
+{
+	<a href="/Account/Login" class="btn btn-success">Login</a>
+	<a href="/Account/Register" class="btn btn-success">Register</a>
+
+}

@@ -1,0 +1,43 @@
+﻿@model string[]
+@{
+	ViewBag.Title = "Error";
+}
+
+<hr />
+<div class="container">
+	<div class="row">
+		<center>
+			<img src="~/Content/img/site-icon.png" alt="sudoku_icon" width="120" height="120" />
+			<br/>
+			<h1 style="font-weight:600">@ViewBag.SiteAddress</h1>
+		</center>
+	</div>
+</div>
+<div class="error-input-div ">
+	<center>
+		@foreach (var error in Model)
+		{
+			<p>@error</p>
+		}
+	</center>
+</div>
+
+<div class="green-card-div">
+	<center>You can <a href="/">return</a> to the Sudoku game here.</center>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
