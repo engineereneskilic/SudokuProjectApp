@@ -1,4 +1,5 @@
 # Sudoku Web Application
+- ![Workflow Diagram (Image)](workflow-diagram.png)
 
 ## Table of Contents
 1. [Introduction](#introduction)
