@@ -1,6 +1,9 @@
 # Sudoku Web Application
  ![Workflow Diagram (Image)](sudoku-game.jpg)
 
+ ### Sudoku Web Application
+[**Sudoku Project Presentation (PDF)**](SudokuProjectPresentation.pdf)  
+
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Technologies Used](#technologies-used)
